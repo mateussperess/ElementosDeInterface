@@ -1,5 +1,6 @@
 package com.example.outroselementosinterface;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,8 @@ public class RadioBtns extends AppCompatActivity {
     public TextView txtRadio;
     public Button btnRadio;
     public RadioGroup rdGroup;
+    public Button btnCheckBox;
+    public Button btnImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,24 @@ public class RadioBtns extends AppCompatActivity {
                 if (rdGroup.getCheckedRadioButtonId() == R.id.rdBtn4) {
                     txtRadio.setText("Radio 4");
                 }
+            }
+        });
+
+        btnCheckBox = findViewById(R.id.btnCheckBox);
+        btnCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent itChkBox = new Intent(RadioBtns.this, MainActivity.class);
+                startActivity(itChkBox);
+            }
+        });
+
+        btnImageView = findViewById(R.id.btnImageView);
+        btnImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent itImgView = new Intent(RadioBtns.this, ImgViewTeste.class);
+                startActivity(itImgView);
             }
         });
     }

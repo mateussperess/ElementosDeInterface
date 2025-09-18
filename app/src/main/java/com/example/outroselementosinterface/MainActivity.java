@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public TextView txtCheck;
 
     public Button btnRadioBtns;
+    public Button btnImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent itRadioBtns = new Intent(MainActivity.this, RadioBtns.class);
                 startActivity(itRadioBtns);
+            }
+        });
+
+        btnImageView = findViewById(R.id.btnImageView);
+        btnImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent itImgView = new Intent(MainActivity.this, ImgViewTeste.class);
+                startActivity(itImgView);
             }
         });
     }

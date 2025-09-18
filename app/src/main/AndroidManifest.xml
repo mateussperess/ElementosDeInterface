@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OutrosElementosInterface">
         <activity
+            android:name=".ImgViewTeste"
+            android:exported="false" />
+        <activity
             android:name=".RadioBtns"
             android:exported="false" />
         <activity
